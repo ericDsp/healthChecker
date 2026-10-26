@@ -1,0 +1,77 @@
+### TASK 1
+
+GET http://localhost:3000/api/resources/London
+
+
+### TASK 3
+
+POST http://localhost:3000/api/resources/1/recommend
+
+
+### CREATE TEST USER
+
+POST http://localhost:3000/api/signup
+Content-Type: application/json
+
+{
+    "username": "studenttest",
+    "password": "Test123!"
+}
+
+
+### LOGIN
+
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+    "username": "studenttest",
+    "password": "Test123!"
+}
+
+
+### CHECK SESSION
+
+GET http://localhost:3000/api/session
+
+
+### ADD RESOURCE WHILE LOGGED IN
+
+POST http://localhost:3000/api/resources
+Content-Type: application/json
+
+{
+    "name": "Assessment Test Clinic",
+    "category": "Clinic",
+    "country": "United Kingdom",
+    "region": "London",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "description": "Resource used to test DiscoverHealth."
+}
+
+
+### ADD REVIEW WHILE LOGGED IN
+
+POST http://localhost:3000/api/reviews
+Content-Type: application/json
+
+{
+    "resource_id": 1,
+    "review": "Very helpful healthcare service."
+}
+
+
+### LOGOUT
+
+POST http://localhost:3000/api/logout
+
+### TASK 12 - ADD REVIEW
+
+POST http://localhost:3000/api/reviews
+Content-Type: application/json
+
+{
+    "resource_id": 1,
+    "review": "Very helpful healthcare service."
+}
